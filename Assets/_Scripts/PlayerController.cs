@@ -7,6 +7,10 @@ public class PlayerController : MonoBehaviour {
 	public Boundary boundary;
 	public float speed;
 
+	private GameObject _gameControllerObject;
+	private GameController _gameController;
+
+
 	public Camera camera;
 	
 	// PRIVATE INSTANCE VARIABLES
@@ -15,6 +19,9 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		this.speed = 0.3f;
+
+		this._gameControllerObject = GameObject.Find ("GameController");
+		this._gameController = this._gameControllerObject.GetComponent<GameController> () as GameController;
 	}
 
 	// Update is called once per frame
@@ -54,4 +61,8 @@ public class PlayerController : MonoBehaviour {
 			this._newPosition.x = this.boundary.xMax;
 		}
 	}
+
+
+
+
 }
