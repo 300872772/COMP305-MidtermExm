@@ -1,6 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * This is a StarWars Scrolling game 
+ * 
+ * @FileName: PlayerController.cs
+ * @Author Md Mamunur Rahman
+ * @student ID: 300872772
+ * @Last Modified By : Md Mamunur Rahman
+ * @Last Update 22-October-2016
+ * @description: this file is PlayerController cs file for the game
+ * @Revision History:  Version 0.1.3, Game is almost done
+ */
+
+/**  
+* <summary>  
+* This is the PlayerController class to control the Game restarting.  
+* </summary>  
+*   
+* @class PlayerController  
+*/
+
+
+
 public class PlayerController : MonoBehaviour {
 	// PRIVATE INSTANCE VARIABLES +++++++++++++++++++++++++++++++++++++++
 	private GameObject _gameControllerObject;
@@ -10,11 +32,6 @@ public class PlayerController : MonoBehaviour {
 	public Boundary boundary;
 	public float speed;
 	public Camera camera;
-
-
-
-
-	
 
 
 	

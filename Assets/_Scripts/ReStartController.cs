@@ -16,7 +16,7 @@ using UnityEngine.SceneManagement;
  * @Last Modified By : Md Mamunur Rahman
  * @Last Update 22-October-2016
  * @description: this file is ReStartingController cs file for the game
- * @Revision History: 
+ * @Revision History:  Version 0.1.3, Game is almost done
  */
 
 /**  
