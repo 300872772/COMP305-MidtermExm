@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		this.enemyCount = 3;
 		this._GenerateEnemies ();
 	}
 	
