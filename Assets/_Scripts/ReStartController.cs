@@ -6,14 +6,17 @@ using UnityEngine.UI;
 
 // reference to manage my scenes
 using UnityEngine.SceneManagement;
+
 /**
- * This is a Platformer game 
+ * This is a StarWars Scrolling game 
  * 
  * @FileName: ReStartingController.cs
  * @Author Md Mamunur Rahman
  * @student ID: 300872772
+ * @Last Modified By : Md Mamunur Rahman
  * @Last Update 22-October-2016
  * @description: this file is ReStartingController cs file for the game
+ * @Revision History: 
  */
 
 /**  
@@ -23,6 +26,9 @@ using UnityEngine.SceneManagement;
 *   
 * @class StartingController  
 */
+
+
+
 public class ReStartController : MonoBehaviour {
 	// PRIVATE INSTANCE VARIABLES
 	private GameObject _gameControllerObject;
@@ -39,7 +45,7 @@ public class ReStartController : MonoBehaviour {
 
 	/**
         * <summary>
-        * This is the method for starting the EnemyController class which initiates value
+        * This is the method for starting the class which initiates value
         * </summary>
         * Get
         * @method Start

@@ -2,21 +2,30 @@
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
-	// PUBLIC INSTANCE VARIABLES +++++++++++++++++++++++++++++++++++++++
-	//public float speed;
-	public Boundary boundary;
-	public float speed;
-
+	// PRIVATE INSTANCE VARIABLES +++++++++++++++++++++++++++++++++++++++
 	private GameObject _gameControllerObject;
 	private GameController _gameController;
-
-
-	public Camera camera;
-	
-	// PRIVATE INSTANCE VARIABLES
 	private Vector2 _newPosition = new Vector2(0.0f, 0.0f);
+	// PUBLIC INSTANCE VARIABLES +++++++++++++++++++++++++++++++++++++++
+	public Boundary boundary;
+	public float speed;
+	public Camera camera;
+
+
+
+
 	
-	// Use this for initialization
+
+
+	
+	/**
+        * <summary>
+        * This is the method for starting the class which initiates value
+        * </summary>
+        * Get
+        * @method Start
+        * @returns {void} 
+        */
 	void Start () {
 		this.speed = 0.3f;
 
@@ -24,10 +33,26 @@ public class PlayerController : MonoBehaviour {
 		this._gameController = this._gameControllerObject.GetComponent<GameController> () as GameController;
 	}
 
-	// Update is called once per frame
+	/**
+        * <summary>
+        * This method is called once per frame.
+        * </summary>
+        * 
+        * @method Update
+        * @returns {void} 
+        */
 	void Update () {
 		this._CheckInput ();
 	}
+
+	/**
+        * <summary>
+        * This method is called to check when there is an input from keboard or mouse.
+        * </summary>
+        * 
+        * @method _CheckInput
+        * @returns {void} 
+        */
 
 	private void _CheckInput() {
 		this._newPosition = gameObject.GetComponent<Transform> ().position; // current position
@@ -51,6 +76,15 @@ public class PlayerController : MonoBehaviour {
 
 		gameObject.GetComponent<Transform>().position = this._newPosition;
 	}
+
+	/**
+        * <summary>
+        * This method is called to check object's boundry.
+        * </summary>
+        * 
+        * @method _BoundaryCheck
+        * @returns {void} 
+        */
 
 	private void _BoundaryCheck() {
 		if (this._newPosition.x < this.boundary.xMin) {

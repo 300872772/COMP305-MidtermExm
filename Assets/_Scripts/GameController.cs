@@ -7,6 +7,27 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
+/**
+ * This is a StarWars Scrolling game 
+ * 
+ * @FileName: GameController.cs
+ * @Author Md Mamunur Rahman
+ * @student ID: 300872772
+ * @Last Modified By : Md Mamunur Rahman
+ * @Last Update 22-October-2016
+ * @description: this file is GameController cs file for the game
+ * @Revision History:  Version 0.1.3, Game is almost done
+ */
+
+/**  
+* <summary>  
+* This is the GameController class to control the Game restarting.  
+* </summary>  
+*   
+* @class GameController  
+*/
+
+
 public class GameController : MonoBehaviour {
 	// PUBLIC INSTANCE VARIABLES
 	public int enemyCount;
@@ -20,14 +41,28 @@ public class GameController : MonoBehaviour {
 	public Text ScoreValue;
 
 
-	// Use this for initialization
+	/**
+        * <summary>
+        * This is the method for starting the class which initiates value
+        * </summary>
+        * Get
+        * @method Start
+        * @returns {void} 
+        */
 	void Start () {
 
 		this._GenerateEnemies ();
 
 	}
 	
-	// Update is called once per frame
+	/**
+        * <summary>
+        * This method is called once per frame.
+        * </summary>
+        * 
+        * @method Update
+        * @returns {void} 
+        */
 	void Update () {
 	
 		this.Lives.text ="Lives: " + this.HullPoint.ToString();
@@ -35,13 +70,28 @@ public class GameController : MonoBehaviour {
 
 	}
 
-	// generate Clouds
+	/**
+        * <summary>
+        * This method is called to generate enemies.
+        * </summary>
+        * 
+        * @method _GenerateEnemies
+        * @returns {void} 
+        */
 	private void _GenerateEnemies() {
 		for (int count=0; count < this.enemyCount; count++) {
 			Instantiate(enemy);
 		}
 	}
 
+	/**
+        * <summary>
+        * This method is called to call Gave Over Scene.
+        * </summary>
+        * 
+        * @method GameOver
+        * @returns {void} 
+        */
 	public void GameOver(){
 		PlayerPrefs.SetInt("HiScore",this.Score);
 		SceneManager.LoadScene ("Restart");
